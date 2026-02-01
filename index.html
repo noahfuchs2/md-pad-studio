@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obsidian Web Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#09090b', // Zinc 950
+              foreground: '#fafafa', // Zinc 50
+              card: {
+                DEFAULT: '#18181b', // Zinc 900
+                foreground: '#fafafa'
+              },
+              popover: {
+                DEFAULT: '#09090b',
+                foreground: '#fafafa'
+              },
+              primary: {
+                DEFAULT: '#fafafa',
+                foreground: '#18181b'
+              },
+              secondary: {
+                DEFAULT: '#27272a', // Zinc 800
+                foreground: '#fafafa'
+              },
+              muted: {
+                DEFAULT: '#27272a',
+                foreground: '#a1a1aa' // Zinc 400
+              },
+              accent: {
+                DEFAULT: '#27272a',
+                foreground: '#fafafa'
+              },
+              destructive: {
+                DEFAULT: '#7f1d1d',
+                foreground: '#fafafa'
+              },
+              border: '#27272a',
+              input: '#27272a',
+              ring: '#d4d4d8',
+            },
+            typography: (theme) => ({
+                DEFAULT: {
+                  css: {
+                    color: theme('colors.zinc.300'),
+                    h1: { color: theme('colors.zinc.100') },
+                    h2: { color: theme('colors.zinc.100') },
+                    h3: { color: theme('colors.zinc.100') },
+                    strong: { color: theme('colors.zinc.100') },
+                    code: { color: theme('colors.pink.500') },
+                    blockquote: { color: theme('colors.zinc.400') },
+                  },
+                },
+              }),
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for Obsidian feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #09090b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272a; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46; 
+      }
+      body {
+        background-color: #09090b;
+        color: #fafafa;
+        overflow: hidden;
+      }
+    </style>
+    <!-- Typography plugin simulation for Tailwind is not available via simple CDN without build step, 
+         so we will style markdown manually or assume base styles are sufficient. -->
+  <script type="importmap">
+{
+  "imports": {
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^3.4.0",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

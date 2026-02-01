@@ -1,0 +1,5 @@
+{
+  "name": "Obsidian Web Clone",
+  "description": "A Markdown editor with local file system access, featuring live preview and dark mode aesthetics similar to Obsidian.",
+  "requestFramePermissions": []
+}
